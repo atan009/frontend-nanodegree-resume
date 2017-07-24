@@ -100,6 +100,12 @@ var education = {
 
 			var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
 			$(".education-entry").last().append(formattedOnlinetitle + formattedOnlineSchool);
+
+			var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
+			$(".education-entry").last().append(formattedOnlineDates);
+
+			var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
+			$(".education-entry").last().append(formattedOnlineURL);
 		}
 		
 	}
@@ -196,4 +202,4 @@ var projects = {
 
 
 projects.display();
-//$("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);

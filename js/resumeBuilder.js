@@ -31,12 +31,16 @@ var bio = {
 
 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 		$("#topContacts").append(formattedMobile);
+		$("#footerContacts").append(formattedMobile);
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 		$("#topContacts").append(formattedEmail);
+		$("#footerContacts").append(formattedEmail);
 		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 		$("#topContacts").append(formattedGithub);
+		$("#footerContacts").append(formattedGithub);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		$("#topContacts").append(formattedLocation);
+		$("#footerContacts").append(formattedLocation);
 
 		$("#header").append(HTMLskillsStart);
 		for (var i = 0; i < bio.skills.length; i++) {
@@ -72,7 +76,6 @@ var education = {
 		//In-Person Courses
 		for (var i = 0; i < education.schools.length; i++) {
 			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
-			//$(".education-entry").append(formattedSchoolName);
 
 			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
 			$(".education-entry").append(formattedSchoolName + formattedSchoolDegree);
@@ -94,9 +97,7 @@ var education = {
 		$("#education").append(HTMLschoolStart);
 		for (var i = 0; i < education.onlineCourses.length; i++) {
 
-
 			var formattedOnlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
-			//$(".education-entry").append(formattedOnlinetitle);
 
 			var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
 			$(".education-entry").last().append(formattedOnlinetitle + formattedOnlineSchool);
@@ -133,7 +134,6 @@ var work = {
 
 		for (var i = 0; i < work.jobs.length; i++) {
 			var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
-			//$(".work-entry").append(formattedWorkEmployer);
 
 			var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
 			$(".work-entry").append(formattedWorkEmployer + formattedWorkTitle);
@@ -154,7 +154,7 @@ var work = {
 work.display();
 
 
-
+//Projects Section
 var projects = {
 	"projects": [{
 		"title": "College Confessions",
